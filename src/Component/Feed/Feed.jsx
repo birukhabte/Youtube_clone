@@ -18,7 +18,7 @@ const Feed = ({ category }) => {
     const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`
     await fetch(videoList_url)
       .then(response => response.json())
-      .then(data => setData(data.item))
+      .then(data => setData(data.items))
   }
   useEffect(() => {
     fetchData()
