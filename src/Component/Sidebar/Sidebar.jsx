@@ -47,7 +47,7 @@ const Sidebar = ({ sidebar, category, setCategory }) => {
           <img src={news} alt="" /><p>News</p>
         </div>
         <hr />
-        <div className='subscribed-lis'>
+        <div className='subscribed-list'>
           <h3>Subscribed</h3>
           <div className={`side-link`} onClick={() => setCategory('0')}>
             <img src={jack} alt="" /><p>PewDiePie</p>
