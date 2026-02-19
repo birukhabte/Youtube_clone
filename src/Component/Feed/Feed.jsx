@@ -24,7 +24,7 @@ const Feed = ({ category }) => {
     fetchData()
   }, [category])
   return (
-    <div className='fee'>
+    <div className='feed'>
       {data.map((item, index) => (
         <Link key={item.id} to={`/video/${item.snippet.categoryId}/${item.id}`} className='card'>
           <img
