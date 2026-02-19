@@ -10,8 +10,8 @@ import thumbnail6 from '../../assets/thumbnail6.png'
 import thumbnail7 from '../../assets/thumbnail7.png'
 import thumbnail8 from '../../assets/thumbnail8.png'
 import { Link } from 'react-router-dom'
-import { API_KEY } from '../../data'
-import { value_converter } from '../../data'
+import { API_KEY } from '../../Data'
+import { value_converter } from '../../Data'
 const Feed = ({ category }) => {
   const [data, setData] = useState([])
   const fetchData = async () => {
@@ -19,7 +19,7 @@ const Feed = ({ category }) => {
     await fetch(videoList_url)
       .then(response => response.json())
       .then(data => setData(data.items))
-  }    
+  }
   useEffect(() => {
     fetchData()
   }, [category])
@@ -40,6 +40,6 @@ const Feed = ({ category }) => {
     </div>
   )
 }
-    
+
 
 export default Feed
